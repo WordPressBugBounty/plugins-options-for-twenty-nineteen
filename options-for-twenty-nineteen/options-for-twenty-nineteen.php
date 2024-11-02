@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Options for Twenty Nineteen
- * Version: 1.5
+ * Version: 1.5.1
  * Plugin URI: https://webd.uk/product/options-for-twenty-nineteen-upgrade/
  * Description: Adds powerful customizer options to modify all aspects of the default WordPress theme Twenty Nineteen
  * Author: Webd Ltd
@@ -21,7 +21,7 @@ if (!class_exists('options_for_twenty_nineteen_class')) {
 
 	class options_for_twenty_nineteen_class {
 
-        public static $version = '1.5';
+        public static $version = '1.5.1';
 
         public $oftn_archive_description_shown;
 
@@ -31,7 +31,6 @@ if (!class_exists('options_for_twenty_nineteen_class')) {
 
             add_action('customize_register', array($this, 'oftn_customize_register'), 999);
             add_action('wp_head' , array($this, 'oftn_header_output'));
-            add_action('customize_controls_enqueue_scripts', array($this, 'oftn_enqueue_customizer_css'));
             add_action('customize_preview_init', array($this, 'oftn_enqueue_customize_preview_js'));
             add_action('customize_controls_enqueue_scripts', array($this, 'oftn_enqueue_customize_controls_js'));
             add_action('after_setup_theme', array($this, 'oftn_add_theme_support'), 11);
@@ -1053,12 +1052,6 @@ h1:not(.site-title):before, h2:before,
 
             wp_enqueue_script('oftn-customize-controls', plugin_dir_url(__FILE__) . 'js/customize-controls.js', array('jquery', 'customize-controls'), oftnCommon::plugin_version(), true);
 
-
-        }
-
-        function oftn_enqueue_customizer_css() {
-
-            wp_enqueue_style('oftn-customizer-css', plugin_dir_url(__FILE__) . 'css/theme-customizer.css', array(), oftnCommon::plugin_version());
 
         }
 

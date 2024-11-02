@@ -3,9 +3,9 @@ Contributors: domainsupport
 Donate link: https://webd.uk/product/options-for-twenty-nineteen-upgrade/
 Tags: twenty-nineteen, twentynineteen, change, customize, modify
 Requires at least: 4.6
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 1.5
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,9 @@ Easily use this plugin to modify WordPress default Twenty Nineteen theme ...
 Changing fonts in a WordPress theme is not a customisation that is limited to Twenty Nineteen. There are lots of plugins out there that already perform this task. We use [TK Google Fonts](https://wordpress.org/plugins/tk-google-fonts/ "TK Google Fonts") for example.
 
 == Changelog ==
+
+= 1.5.1 =
+* Remove Customizer CSS due to incompatible change introduced in WordPress v6.7
 
 = 1.5 =
 * Minor security updates to translation strings
@@ -258,5 +261,5 @@ Changing fonts in a WordPress theme is not a customisation that is limited to Tw
 
 == Upgrade Notice ==
 
-= 1.5 =
-* Minor security updates to translation strings
+= 1.5.1 =
+* Remove Customizer CSS due to incompatible change introduced in WordPress v6.7
